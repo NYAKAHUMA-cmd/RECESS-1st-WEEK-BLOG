@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My First Week: UCU Recess Journal — Nyakahuma Cyrus Peter</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a18;
+    --ink-soft: #4a4a45;
+    --ink-muted: #8a8a82;
+    --paper: #faf8f3;
+    --paper-warm: #f2efe6;
+    --paper-card: #ffffff;
+    --accent: #1d6b4a;
+    --accent-light: #e1f5ee;
+    --accent-mid: #0f6e56;
+    --gold: #ba7517;
+    --gold-light: #faeeda;
+    --border: rgba(26,26,24,0.1);
+    --border-strong: rgba(26,26,24,0.2);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 17px;
+  }
+
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 3.5rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.04) 39px,
+      rgba(255,255,255,0.04) 40px
+    );
+  }
+
+  .masthead-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    border: 1px solid rgba(29,107,74,0.6);
+    padding: 4px 14px;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .masthead .subtitle {
+    font-size: 15px;
+    color: rgba(250,248,243,0.65);
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .byline {
+    font-size: 13px;
+    font-family: 'DM Mono', monospace;
+    color: rgba(250,248,243,0.5);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.2rem;
+    margin-top: 1.2rem;
+  }
+
+  .byline strong { color: rgba(250,248,243,0.85); }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .intro-block {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    padding: 2rem 2.5rem;
+    margin: 3rem auto;
+    max-width: 760px;
+  }
+
+  .intro-block p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+  }
+
+  .day-section {
+    border-top: 1px solid var(--border);
+    padding: 3rem 0;
+  }
+
+  .day-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .day-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--paper-warm);
+    -webkit-text-stroke: 2px var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .day-meta { flex: 1; }
+
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .day-date {
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+
+  .day-body p {
+    color: var(--ink-soft);
+    margin-bottom: 1.2rem;
+  }
+
+  .highlight-box {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .highlight-box p {
+    color: var(--accent-mid) !important;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .gold-box {
+    background: var(--gold-light);
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .gold-box p {
+    color: #633806 !important;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 1.2rem 0;
+  }
+
+  .pill {
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    background: var(--paper-warm);
+    border: 1px solid var(--border-strong);
+    color: var(--ink-soft);
+    padding: 4px 12px;
+    border-radius: 2px;
+  }
+
+  .pill.accent { background: var(--accent-light); border-color: var(--accent); color: var(--accent-mid); }
+  .pill.gold { background: var(--gold-light); border-color: var(--gold); color: #633806; }
+
+  .rule-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    margin: 0.6rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-radius: 3px;
+  }
+
+  .rule-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--accent-light);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+    color: var(--accent-mid);
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+  }
+
+  .rule-card p { margin: 0; font-size: 15px; color: var(--ink-soft); }
+  .rule-card strong { color: var(--ink); }
+
+  .wave-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .wave-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .wave-card .wave-era {
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .wave-card .wave-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .wave-card .wave-desc {
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  .wave-card.active { border-color: var(--accent); background: var(--accent-light); }
+  .wave-card.active .wave-name { color: var(--accent-mid); }
+  .wave-card.active .wave-desc { color: var(--accent); }
+
+  .model-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1.2rem 0;
+  }
+
+  .model-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    border-radius: 3px;
+  }
+
+  .model-card .provider {
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+  }
+
+  .model-card .models {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .commitment-box {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2rem 2.5rem;
+    margin: 2rem 0;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .commitment-box::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+  }
+
+  .commitment-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(250,248,243,0.85);
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .stat-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  .stat-card .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.1;
+  }
+
+  .stat-card .stat-label {
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+
+  .cyber-banner {
+    background: #0a0f1e;
+    color: #b5d4f4;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 3px;
+    border: 1px solid #185fa5;
+  }
+
+  .cyber-banner .cyber-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #378add;
+    margin-bottom: 0.5rem;
+  }
+
+  .cyber-banner p {
+    font-size: 15px;
+    color: #85b7eb;
+    margin: 0;
+  }
+
+  .closing {
+    background: var(--paper-warm);
+    border-top: 1px solid var(--border);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--ink);
+  }
+
+  .closing p { color: var(--ink-soft); max-width: 520px; margin: 0 auto 1rem; }
+
+  .sig {
+    margin-top: 2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  .sig strong { color: var(--ink); display: block; font-size: 15px; margin-bottom: 4px; }
+
+  @media (max-width: 600px) {
+    .wave-grid { grid-template-columns: 1fr; }
+    .model-grid { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: 1fr; }
+    .intro-block { padding: 1.5rem; }
+    .commitment-box { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <div class="tag">UCU Recess Blog · May 2026</div>
+    <h1>Five Days That Changed How I See Computing</h1>
+    <p class="subtitle">A week-by-week journal of orientation, innovation, GitHub Copilot, and learning to build for real people.</p>
+    <div class="byline">
+      Written by <strong>Nyakahuma Cyrus Peter</strong> &nbsp;·&nbsp; B34729 &nbsp;·&nbsp;
+      Department of Computing, Technology & Engineering &nbsp;·&nbsp; Uganda Christian University
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="intro-block">
+    <p>The recess period running from 4th May to 24th July 2026 is not a vacation from academic obligations — it is a structured professional sprint. This blog documents my first five days: the commitments I made, the skills I encountered, and the moments that reminded me why I chose Computer Science.</p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Days documented</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">30+</div>
+      <div class="stat-label">Hrs/week committed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Evening sessions attended</div>
+    </div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="day-section">
+    <div class="day-label">
+      <div class="day-number">01</div>
+      <div class="day-meta">
+        <div class="day-title">Orientation & The Commitment</div>
+        <div class="day-date">Sunday, 4th May 2026</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <p>Day one set the tone for everything that followed. We gathered for a full orientation where the structure, expectations, and ground rules of the recess session were laid out clearly. There was no ambiguity about what was expected of us.</p>
+      <p>The most significant moment of the day was writing our commitment statements — a formal, signed declaration of intent submitted to the Department of Computing, Technology and Engineering. Mine read in part:</p>
+
+      <div class="commitment-box">
+        <p>I recognise this period as a critical opportunity to advance my technical competencies, not merely a vacation from academic obligations. I will dedicate a minimum of 30 hours per week to deliberate practice. I will build one demonstrable project aligned with IT, version controlled on GitHub with a professional README. My signature below represents a professional contract between myself and the standards of the department.</p>
+      </div>
+
+      <p>Writing that statement made the recess feel real. This was not downtime — it was an internship sprint of my own design.</p>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-section">
+    <div class="day-label">
+      <div class="day-number">02</div>
+      <div class="day-meta">
+        <div class="day-title">Tools, LaTeX & Ground Rules</div>
+        <div class="day-date">Monday, 5th May 2026</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <p>Day two was about getting operationally ready. We were introduced to the tools we would be using throughout the recess, and a first assignment was issued: write our initial project report using <strong>LaTeX</strong> — a professional typesetting system that most students hadn't used before. That alone was a signal: we were being trained to work to industry standards.</p>
+
+      <div class="rule-card">
+        <div class="rule-icon">🕗</div>
+        <p><strong>"8 is 8"</strong> — No student is permitted entry past 8:00 AM. Punctuality is non-negotiable and enforced from day one.</p>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🙏</div>
+        <p><strong>Morning prayer</strong> — Every session opens with a devotional moment, grounding the day with intention.</p>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">📅</div>
+        <p><strong>Daily theme</strong> — Each day carries a thematic focus that guides discussions and activities.</p>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">📋</div>
+        <p><strong>Attendance record</strong> — Missing more than 5 days without documented grounds risks being required to retake the recess session.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-section">
+    <div class="day-label">
+      <div class="day-number">03</div>
+      <div class="day-meta">
+        <div class="day-title">LinkedIn, Innovation & Upshift Ideation</div>
+        <div class="day-date">Tuesday, 6th May 2026</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <p>Day three was the most packed yet. The theme was <strong>Innovation</strong>, and multiple facilitators contributed across different sessions.</p>
+
+      <p><strong>Mr. Shelby</strong> led an eye-opening session on LinkedIn — not just as a platform, but as a professional presence. We explored how to build a compelling profile, what kind of content to post as IT students, and how our online presence is an extension of our portfolio.</p>
+
+      <div class="highlight-box">
+        <p>Key takeaway: your LinkedIn is not a CV dump — it is a living document of your growth. Post your learnings, your builds, your process. Show people who you are becoming.</p>
+      </div>
+
+      <p>The session also touched on <strong>exposure</strong> — how to market and advertise ourselves as student developers — and <strong>professional email communication</strong> as the standard channel for all formal correspondence during the recess.</p>
+
+      <p>The afternoon shifted to <strong>Upshift</strong>, a human-centred innovation framework. The day's Upshift context was <strong>Ideation</strong>. Working in groups, we were tasked with:</p>
+
+      <div class="pill-list">
+        <span class="pill accent">Choosing a real problem</span>
+        <span class="pill accent">Linking it to an SDG</span>
+        <span class="pill accent">Writing a problem statement</span>
+        <span class="pill accent">Identifying causes & effects</span>
+        <span class="pill accent">Building a persona</span>
+        <span class="pill accent">Creating diagrams & charts</span>
+      </div>
+
+      <p>The energy in the room during group work was remarkable — students debating, sketching on large sheets, arguing about which problem mattered most. It was the first taste of what problem-centred design actually feels like.</p>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-section">
+    <div class="day-label">
+      <div class="day-number">04</div>
+      <div class="day-meta">
+        <div class="day-title">Presentations, Field Work & Problem Validation</div>
+        <div class="day-date">Wednesday, 7th May 2026</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <p>Day four was the most physically and mentally demanding day of the week. We began by presenting our group research work from Day 3 — and the facilitators did not hold back. Errors were highlighted and we were sent back to correct them, repeating the cycle until the work met the required standard.</p>
+
+      <div class="gold-box">
+        <p>Some of us skipped lunch to complete our corrections. Looking back, that was exactly the right call. The standard mattered more than the comfort.</p>
+      </div>
+
+      <p>Strong emphasis was placed on two things in particular: generating a <strong>valid problem statement</strong> and a <strong>clear solution goal</strong>. A vague problem produces a vague solution. The facilitators pushed us to be precise.</p>
+
+      <p>In the evening, we went out for <strong>field work</strong> — each group went into the public to validate their identified problem in the real world. The principle was clear: we are not building solutions for ourselves; we are building them for people. Their responses matter.</p>
+
+      <p>After returning from the field, every student wrote an <strong>individual report</strong> based on the public responses gathered, complete with charts and data visualisations. The day ended late, but it ended with something solid in hand.</p>
+
+      <div class="highlight-box">
+        <p>Upcoming: an AI & GitHub Agentic session announced — attendance compulsory, marks awarded. Venue change from Ankrah hall communicated to all students.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-section">
+    <div class="day-label">
+      <div class="day-number">05</div>
+      <div class="day-meta">
+        <div class="day-title">GitHub Copilot Dev Days + Cybersecurity Chapter</div>
+        <div class="day-date">Friday, 8th May 2026</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <p>The final day of the first week was unlike any other — it stepped fully outside the classroom and into the professional tech community. Day five hosted two major events back-to-back.</p>
+
+      <p>The morning started with some confusion (a locked lab door, an initial detour to N11A), but I used that time productively — completing my <strong>Challenge Statement & Strategic Alignment Report</strong> before the session officially opened. A small win.</p>
+
+      <p><strong>GitHub Copilot Dev Days — Mukono Edition</strong> was presented in partnership with GDG on Campus, with <strong>Shakiran Nannyombi</strong> (Software Engineer) as lead presenter. The session covered the full evolution and current state of GitHub Copilot.</p>
+
+      <p>The "Riding the Waves" framework explained the three generations of AI-assisted development:</p>
+
+      <div class="wave-grid">
+        <div class="wave-card">
+          <div class="wave-era">2021 – 2023</div>
+          <div class="wave-name">Wave 1</div>
+          <div class="wave-desc">Code completion. Copilot as a pair programmer.</div>
+        </div>
+        <div class="wave-card active">
+          <div class="wave-era">2024 – Present</div>
+          <div class="wave-name">Wave 2</div>
+          <div class="wave-desc">Agentic SDLC. Beyond pair programming.</div>
+        </div>
+        <div class="wave-card">
+          <div class="wave-era">2026 +</div>
+          <div class="wave-name">Wave 3</div>
+          <div class="wave-desc">Hybrid teams. Humans + AI agents collaborating.</div>
+        </div>
+      </div>
+
+      <p>Beyond the evolution story, the session demonstrated Copilot across the full development environment — in VS Code (with Agent Mode, MCP Apps, Subagents, Custom Agents, Claude & Codex integration), in Visual Studio 2026 (with Debugger, Profiler, Azure MCP Server), and on GitHub Mobile for on-the-go collaboration.</p>
+
+      <p>GitHub Copilot CLI was also showcased as an AI terminal companion — the ability to write, test, and debug code directly from the terminal, connected to the GitHub MCP Server.</p>
+
+      <p>One of the most impressive slides showed the breadth of models now accessible through GitHub Copilot:</p>
+
+      <div class="model-grid">
+        <div class="model-card">
+          <div class="provider">Anthropic</div>
+          <div class="models">Claude Haiku 4.5<br>Claude Sonnet 4.6<br>Claude Opus 4.6</div>
+        </div>
+        <div class="model-card">
+          <div class="provider">OpenAI</div>
+          <div class="models">GPT 5-mini<br>GPT 5.2<br>GPT 5.3-Codex</div>
+        </div>
+        <div class="model-card">
+          <div class="provider">Google</div>
+          <div class="models">Gemini 3.1 Pro<br>Gemini 3 Flash</div>
+        </div>
+        <div class="model-card">
+          <div class="provider">Bring Your Own Key</div>
+          <div class="models">xAI · Ollama · OpenRouter<br>Microsoft Foundry · + more</div>
+        </div>
+      </div>
+
+      <p>The session closed with a Kahoot quiz, awards for top performers, and a sweepstakes for a GitHub Copilot Pro+ one-year subscription for those who completed the survey. I didn't win — but I left knowing things I didn't know in the morning, and that was the real prize.</p>
+
+      <div class="cyber-banner">
+        <div class="cyber-title">Evening — Cybersecurity UCU Chapter · First Session</div>
+        <p>"Guardians of the Byte" — the UCU Cybersecurity Chapter held its inaugural session at the Media Lab, 2:00 PM to 5:00 PM. New vocabulary, new community, new direction. Introduction to Cybersecurity was presented, followed by a Q&A with winners awarded. A world I intend to explore further.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="closing">
+  <div class="container">
+    <h2>Week One: Complete.</h2>
+    <p>Five days. Two evening sessions. One signed commitment. Countless new concepts. The recess has only just begun, and already the pace feels right — demanding enough to grow, structured enough to stay on track.</p>
+    <p>The commitment I signed on Day 1 is not a piece of paper in a folder. It is the contract I hold myself to every morning when I open my laptop. 8 is 8. And the work continues.</p>
+
+    <div class="pill-list" style="justify-content: center; margin-top: 1.5rem;">
+      <span class="pill">LaTeX</span>
+      <span class="pill">LinkedIn</span>
+      <span class="pill">Upshift</span>
+      <span class="pill">GitHub Copilot</span>
+      <span class="pill">Agentic AI</span>
+      <span class="pill">Field Research</span>
+      <span class="pill">Cybersecurity</span>
+      <span class="pill">SDGs</span>
+    </div>
+
+    <div class="sig">
+      <strong>Nyakahuma Cyrus Peter</strong>
+      B34729 · 0706195154<br>
+      Computer Science · Uganda Christian University<br>
+      Recess Period: 4th May – 24th July 2026
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
